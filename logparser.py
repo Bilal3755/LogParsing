@@ -48,8 +48,8 @@ def load_logs(file_lines):
     return df
 
 
-# --- UI Layout ---
-st.title("ðŸŒ Webserver Log Dashboard")
+
+st.title("Webserver Log Dashboard")
 st.write("Upload Nginx/Apache log files to filter traffic and analyze access hits.")
 
 log_file = st.sidebar.file_uploader("Upload Log File (.log, .txt)", type=["log", "txt"])
@@ -79,7 +79,7 @@ else:
 
         search_url = st.sidebar.text_input("Search URL Keyword", "")
 
-        # Apply filtering
+       
         filtered = df[
             (df['date'] >= start_date) &
             (df['date'] <= end_date) &
